@@ -59,6 +59,15 @@ class SLL{
 		else
 			return findMaxHelper(n.getNext(), max);
 	}
+
+	public int getHeadValue(){
+		return head.getVal();
+	}
+
+	public Node getHead()
+	{
+		return head;
+	}
 	
 
 	public int getSum(){
