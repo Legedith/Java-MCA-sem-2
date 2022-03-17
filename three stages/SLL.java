@@ -28,7 +28,7 @@ class SLL{
 			s.setNext(head);
 			head = s;
 		}
-		System.out.println("Inserted "+this.head.getVal()+" at begin");
+		// System.out.println("Inserted "+this.head.getVal()+" at begin");
 	}
 
 	public int deleteAtBegin()

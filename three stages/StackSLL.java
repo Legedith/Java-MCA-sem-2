@@ -8,7 +8,7 @@ class StackSLL{
     
     
     public void push(int v){
-        System.out.println("Pushing "+v);
+        // System.out.println("Pushing "+v);
         s.insertAtBegin(v);
     }
     
