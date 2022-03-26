@@ -3,7 +3,6 @@ public class book {
     // Book contains page, title, author
     String title;
     String author;
-    int numPages;
     List<page> pages;
 
     // constructor for making a book
@@ -11,6 +10,7 @@ public class book {
     {
         title = t;
         author = a;
+        pages = new ArrayList<page>();
     }
     public book()
     {
@@ -36,6 +36,25 @@ public class book {
             addPage(content);
         }
     }
-    // replace page to replace the content of the 
+    public void removePage(int pno)
+    {
+        if (pno<pages.size())
+        {
+            pages.remove(pno);
+        }
+    }
+    public String getTitle()
+    {
+        return title;
+    }
+    public String getAuthor()
+    {
+        return author;
+    }
+    public int getNumPages()
+    {
+        return pages.size();
+    }
+
     
 }
