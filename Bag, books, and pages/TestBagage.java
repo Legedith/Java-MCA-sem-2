@@ -26,7 +26,7 @@ public class TestBagage {
             for (int i=0; i<numPages; i++)
             {
                 String content = "";
-                for (int j = 0; j<(int)(Math.random() * 10) + 5; j++)
+                for (int j = 0; j<(int)(Math.random() * 20) + 10; j++)
                 {
                     content += randomText.getRandomWord() + " ";
                 }
