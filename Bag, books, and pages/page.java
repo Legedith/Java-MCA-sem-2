@@ -1,10 +1,11 @@
 public class page {
-    int pageno;
-    String content;
+    
+    private int pageno;
+    private String content;
     
     public page()
     {
-        page(0, "");
+        this(0, "");
     }
     
     public page(int n, String s)
