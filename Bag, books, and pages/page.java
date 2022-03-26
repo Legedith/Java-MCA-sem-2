@@ -29,5 +29,5 @@ public class page {
     {
         return content;
     }
-
+    // Finished page class
 }
