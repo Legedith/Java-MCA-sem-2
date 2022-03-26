@@ -19,7 +19,10 @@ public class book {
     // addPage function to create and add a page to list based on content passed
     public void addPage(String content)
     {
-        pages.add(content);
+        int pno = pages.size() - 1;
+
+        page p = new page(pno, content);
+        pages.add(p);
     }
     public void addPage(String content, int pno)
     {
