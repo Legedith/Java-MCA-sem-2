@@ -26,11 +26,11 @@ public class TestBagage {
             for (int i=0; i<numPages; i++)
             {
                 String content = "";
-                for (int j = 0; j<(int)(Math.random() * 20) + 10; j++)
+                for (int j = 0; j<(int)(Math.random() * 5) + 3; j++)
                 {
                     content += randomText.getRandomWord() + " ";
                 }
-                System.out.println(content);
+                // System.out.println(content);
                 b.addPage(content);
             }
         }
@@ -40,7 +40,13 @@ public class TestBagage {
         //     System.out.println(randomText.getRandomWord());
 
         bag backpack = new bag(books);
+        System.out.println("\nContents of backpack:");
+        backpack.printBag();
 
+        System.out.println("\nSearch for word 'morning' in backpack:");
+        backpack.search("morning");
 
+        System.out.println("\nSearch for book with most occurances of 'wish' in backpack:");
+        backpack.mostFrequentWord("wish");
     }
 }

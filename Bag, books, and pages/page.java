@@ -30,5 +30,19 @@ public class page {
     {
         return content;
     }
+    public int getWordCount(String word)
+    {
+        // return count of times the word appears in the content, 0 if not found
+        int count = 0;
+        String[] words = content.split(" ");
+        for (String w : words)
+        {
+            if (w.equals(word))
+            {
+                count++;
+            }
+        }
+        return count;
+    }
     // Finished page class
 }

@@ -55,6 +55,15 @@ public class book {
     {
         return pages.size();
     }
+    public int getTotalWordCount(String word)
+    {
+        int count = 0;
+        for (page p : pages)
+        {
+            count += p.getWordCount(word);
+        }
+        return count;
+    }
 
     
 }
