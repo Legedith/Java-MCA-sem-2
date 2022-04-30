@@ -16,10 +16,10 @@ class stack{
 	}
 	
 	// Methods.
-	public void push(char c){
+	public void push(char c) throws OverFlowException{
 		if(this.isFull){
-			System.out.println("STACK OVERFLOW, the character "+c+" cannot be pushed in the stack.");
-			return;
+			//System.out.println("STACK OVERFLOW, the character "+c+" cannot be pushed in the stack.");
+			throw new OverFlowException(maxSize, c);
 		}
 		this.isEmpty = false;
 		this.sArr[this.topPtr] = c;
@@ -36,11 +36,11 @@ class stack{
 		System.out.println("");
 	}
 	
-	public char pop(){
+	public char pop() throws UnderFlowException{
 		char c = '\0';
 		if(this.isEmpty){
-			System.out.println("STACK UNDERFLOW, We cannot pop any character from the stack.");
-			return c;
+			// System.out.println("STACK UNDERFLOW, We cannot pop any character from the stack.");
+			throw new UnderFlowException();
 		}
 		this.isFull = false;
 		this.topPtr--;
